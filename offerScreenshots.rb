@@ -254,14 +254,12 @@ if type == "standard"
 	puts "| Packages page (#{product}) | [View Preview | ^#{promo}_packages_#{product}_desktop.png] |"
 end
 
-if area == "res" && type == "standard" || type == "affiliate"
+if area == "res" && type == "standard" || area == "res" && type == "affiliate"
 	puts "| Deals page (#{product}) - Line Only | [View Preview | ^#{promo}_deals_lineonly_#{product}_desktop.png] |"
 	puts "| Deals page (#{product}) - Evenings & Weekends | [View Preview | ^#{promo}_deals_eveningsandweekends_#{product}_desktop.png] |"
 	puts "| Deals page (#{product}) - Anytime | [View Preview | ^#{promo}_deals_anytime_#{product}_desktop.png] |"
 	puts "| Deals page (#{product}) - Anytime International 300 | [View Preview | ^#{promo}_deals_anytimeinternational_#{product}_desktop.png] |"
-end
-
-if area == "biz" && type == "standard" || type == "affiliate"
+elsif area == "biz" && type == "standard" || area == "biz" && type == "affiliate"
 	puts "| Deals page (#{product}) - PayG | [View Preview | ^#{promo}_deals_payg_#{product}_desktop.png] |"
 	puts "| Deals page (#{product}) - Anytime | [View Preview | ^#{promo}_deals_anytime_#{product}_desktop.png] |"
 	puts "| Deals page (#{product}) - Anytime International 500 | [View Preview | ^#{promo}_deals_anytimeinternational500_#{product}_desktop.png] |"
