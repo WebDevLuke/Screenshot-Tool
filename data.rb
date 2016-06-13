@@ -5,11 +5,15 @@ $res = {
 	campaign: {
 		adsl:  {
 			products: "http://www.plus.net/campaigns/products/OctAADual/",
-			recontract: "http://www.plus.net/campaigns/recontract/OctAADual/"
+			products2: "https://www.plus.net/campaigns/products/AADualBBChange/",
+			recontract: "http://www.plus.net/campaigns/recontract/OctAADual/",
+			recontract2: "https://www.plus.net/campaigns/recontract/AADualBBChange/"
 		},
 		fibre: {
 			products: "http://www.plus.net/campaigns/products/OctFibreDual/",
-			recontract: "http://www.plus.net/campaigns/recontract/OctFibreDual/"
+			products2: "http://www.plus.net/campaigns/products/FibreDualBBChange/",
+			recontract: "http://www.plus.net/campaigns/recontract/OctFibreDual/",
+			recontract2: "http://www.plus.net/campaigns/recontract/FibreDualBBChange/"
 		}
 	},
 
@@ -17,6 +21,8 @@ $res = {
 	    	adsl:  {
 			homepage_slide1: "http://www.plus.net/",
 			homepage_slide2: "http://www.plus.net/",
+			homepage_slide3: "http://www.plus.net/",
+			homepage_slide4: "http://www.plus.net/",
 			packages: "http://www.plus.net/home-broadband/",
 			deals_lineonly: "http://www.plus.net/deals/unlimited/line-only/",
 			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited/evenings-and-weekends/",
@@ -26,11 +32,24 @@ $res = {
 	    	fibre:  {
 			homepage_slide1: "http://www.plus.net/",
 			homepage_slide2: "http://www.plus.net/",
+			homepage_slide3: "http://www.plus.net/",
+			homepage_slide4: "http://www.plus.net/",
 			packages: "http://www.plus.net/home-broadband/fibre/",
 			deals_lineonly: "http://www.plus.net/deals/unlimited-fibre/line-only/",
 			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre/evenings-and-weekends/",
 			deals_anytime: "http://www.plus.net/deals/unlimited-fibre/anytime/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre/anytime-international/"
+		},
+	    	fibreExtra:  {
+			homepage_slide1: "http://www.plus.net/",
+			homepage_slide2: "http://www.plus.net/",
+			homepage_slide3: "http://www.plus.net/",
+			homepage_slide4: "http://www.plus.net/",
+			packages: "http://www.plus.net/home-broadband/fibre/",
+			deals_lineonly: "http://www.plus.net/deals/unlimited-fibre-extra/line-only/",
+			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre-extra/evenings-and-weekends/",
+			deals_anytime: "http://www.plus.net/deals/unlimited-fibre-extra/anytime/",
+			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre-extra/anytime-international/"
 		}
 	},
 
@@ -46,6 +65,12 @@ $res = {
 			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre/evenings-and-weekends/",
 			deals_anytime: "http://www.plus.net/deals/unlimited-fibre/anytime/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre/anytime-international/"
+		},
+	    	fibreExtra:  {
+			deals_lineonly: "http://www.plus.net/deals/unlimited-fibre-extra/line-only/",
+			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre-extra/evenings-and-weekends/",
+			deals_anytime: "http://www.plus.net/deals/unlimited-fibre-extra/anytime/",
+			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre-extra/anytime-international/"
 		}
 	}
 
@@ -58,6 +83,8 @@ $biz = {
 	    	adsl:  {
 			homepage_slide1: "http://www.plus.net/business",
 			homepage_slide2: "http://www.plus.net/business",
+			homepage_slide3: "http://www.plus.net/business",
+			homepage_slide4: "http://www.plus.net/business",
 			packages: "http://www.plus.net/business/broadband",
 			deals_payg: "https://www.plus.net/business/deals/unlimited-business-broadband/pay-g/",
 			deals_anytime: "https://www.plus.net/business/deals/unlimited-business-broadband/anytime/",
@@ -67,6 +94,8 @@ $biz = {
 	    	fibre:  {
 			homepage_slide1: "http://www.plus.net/business",
 			homepage_slide2: "http://www.plus.net/business",
+			homepage_slide3: "http://www.plus.net/business",
+			homepage_slide4: "http://www.plus.net/business",
 			packages: "http://www.plus.net/business/broadband/fibre-optic/",
 			deals_payg: "https://www.plus.net/business/deals/unlimited-business-fibre-broadband/pay-g/",
 			deals_anytime: "https://www.plus.net/business/deals/unlimited-business-fibre-broadband/anytime/",

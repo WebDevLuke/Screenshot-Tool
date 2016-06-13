@@ -38,7 +38,7 @@ require_relative 'data.rb'
 #############################################################
 
 if ARGV[0] == "help"
-	abort("#{div}Arguments Breakdown:#{div}ruby offerScreenshots.rb [Proxy] [PromoCode] [Product Type] [Offer Type] [Area]\n\n[Proxy] = Enter your proxy IP address here\n\n[PromoCode] Enter your promo code here (eg: 1516octoffer1)\n\n[Product Type] Enter the type of product here. Choose from 'unlimited' 'unlimited-fibre' and 'unlimited-fibre-extra'\n\n[Offer Type] Enter the type of offer. Choose from 'standard' 'affiliate' 'existing-customer'\n\n[Area] Select either Res or Biz")
+	abort("#{div}Arguments Breakdown:#{div}ruby offerScreenshots.rb [Proxy] [PromoCode] [Product Type] [Offer Type] [Area]\n\n[Proxy] = Enter your proxy IP address here\n\n[PromoCode] Enter your promo code here (eg: 1516octoffer1)\n\n[Product Type] Enter the type of product here. Choose from 'unlimited' 'unlimited-fibre' and 'unlimited-fibre-extra'\n\n[Offer Type] Enter the type of offer. Choose from 'standard' 'affiliate' 'existing-customer'\n\n[Area] Select either res or biz. Everything is case sensitive.")
 end	
 
 #############################################################
@@ -143,6 +143,10 @@ if type == "standard" && area == "res"
 		goto = $res[:standard][:fibre]
 	end
 
+	if product == "unlimited-fibre-extra"
+		goto = $res[:standard][:fibreExtra]
+	end
+
 elsif type == "standard" && area == "biz"
 
 	if product == "unlimited"
@@ -185,6 +189,10 @@ if type == "affiliate" && area == "res"
 		goto = $res[:affiliate][:fibre]
 	end
 
+	if product == "unlimited-fibre-extra"
+		goto = $res[:affiliate][:fibreExtra]
+	end
+
 elsif type == "affiliate" && area == "biz"
 
 	if product == "unlimited"
@@ -219,6 +227,24 @@ goto.each do |page, url|
 			$browser.element(:css => ".h_beta:nth-child(2)").hover
 		end
 		puts "Moved to slide 2"
+	elsif current == "homepage_slide3"
+		$browser.goto "#{url}"
+		puts "Opened #{url}"
+		if area == "res"
+			$browser.element(id: "tk_carousel_tab-3").hover
+		elsif area == "biz"
+			$browser.element(:css => ".h_beta:nth-child(3)").hover
+		end
+		puts "Moved to slide 3"
+	elsif current == "homepage_slide4"
+		$browser.goto "#{url}"
+		puts "Opened #{url}"
+		if area == "res"
+			$browser.element(id: "tk_carousel_tab-4").hover
+		elsif area == "biz"
+			$browser.element(:css => ".h_beta:nth-child(4)").hover
+		end
+		puts "Moved to slide 4"
 	else
 		$browser.goto "#{url}"
 		puts "Opened #{url}"
@@ -251,6 +277,8 @@ puts "|| Page || Screenshot ||"
 if type == "standard"
 	puts "| Home page - Slide 1 | [View Preview | ^#{promo}_homepage_slide1_#{product}_desktop.png] |"
 	puts "| Home page - Slide 2 | [View Preview | ^#{promo}_homepage_slide2_#{product}_desktop.png] |"
+	puts "| Home page - Slide 3 | [View Preview | ^#{promo}_homepage_slide3_#{product}_desktop.png] |"
+	puts "| Home page - Slide 4 | [View Preview | ^#{promo}_homepage_slide4_#{product}_desktop.png] |"
 	puts "| Packages page (#{product}) | [View Preview | ^#{promo}_packages_#{product}_desktop.png] |"
 end
 
@@ -268,7 +296,9 @@ end
 
 if type == "existing-customer"
 	puts "| Existing Customer Campaign Page (#{product}) - Product Upgrade | [View Preview | ^#{promo}_products_#{product}_desktop.png] |"
+	puts "| Existing Customer Campaign Page (#{product}) - Product Upgrade | [View Preview | ^#{promo}_products2_#{product}_desktop.png] |"
 	puts "| Existing Customer Campaign Page (#{product}) - Product Recontract | [View Preview | ^#{promo}_recontract_#{product}_desktop.png] |"
+	puts "| Existing Customer Campaign Page (#{product}) - Product Upgrade | [View Preview | ^#{promo}_recontract2_#{product}_desktop.png] |"
 end
 
 puts "(!) You can find a full breakdown of everypage, at every size (mobile, tablet & desktop) on filestore: Departments/Web Development/TAMA/Offer Screenshots/TAMA-NUMBER/"
