@@ -25,8 +25,8 @@ $res = {
 			homepage_slide4: "http://www.plus.net/",
 			packages: "http://www.plus.net/home-broadband/",
 			deals_lineonly: "http://www.plus.net/deals/unlimited/line-only/",
-			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited/evenings-and-weekends/",
-			deals_anytime: "http://www.plus.net/deals/unlimited/anytime/",
+			deals_eveningsandweekendsandmobilecalls: "http://www.plus.net/deals/unlimited/evening-and-weekend-UK-and-mobile-calls/",
+			deals_unlimitedukandmobilecalls: "http://www.plus.net/deals/unlimited/unlimited-UK-and-mobile-calls/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited/anytime-international/"
 		},
 	    	fibre:  {
@@ -36,8 +36,8 @@ $res = {
 			homepage_slide4: "http://www.plus.net/",
 			packages: "http://www.plus.net/home-broadband/fibre/",
 			deals_lineonly: "http://www.plus.net/deals/unlimited-fibre/line-only/",
-			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre/evenings-and-weekends/",
-			deals_anytime: "http://www.plus.net/deals/unlimited-fibre/anytime/",
+			deals_eveningsandweekendsandmobilecalls: "http://www.plus.net/deals/unlimited-fibre/evening-and-weekend-UK-and-mobile-calls/",
+			deals_unlimitedukandmobilecalls: "http://www.plus.net/deals/unlimited-fibre/unlimited-UK-and-mobile-calls/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre/anytime-international/"
 		},
 	    	fibreExtra:  {
@@ -47,8 +47,8 @@ $res = {
 			homepage_slide4: "http://www.plus.net/",
 			packages: "http://www.plus.net/home-broadband/fibre/",
 			deals_lineonly: "http://www.plus.net/deals/unlimited-fibre-extra/line-only/",
-			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre-extra/evenings-and-weekends/",
-			deals_anytime: "http://www.plus.net/deals/unlimited-fibre-extra/anytime/",
+			deals_eveningsandweekendsandmobilecalls: "http://www.plus.net/deals/unlimited-fibre-extra/evening-and-weekend-UK-and-mobile-calls/",
+			deals_unlimitedukandmobilecalls: "http://www.plus.net/deals/unlimited-fibre-extra/unlimited-UK-and-mobile-calls/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre-extra/anytime-international/"
 		}
 	},
@@ -56,20 +56,20 @@ $res = {
 	affiliate: {
 	    	adsl:  {
 			deals_lineonly: "http://www.plus.net/deals/unlimited/line-only/",
-			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited/evenings-and-weekends/",
-			deals_anytime: "http://www.plus.net/deals/unlimited/anytime/",
+			deals_eveningsandweekendsandmobilecalls: "http://www.plus.net/deals/unlimited/evening-and-weekend-UK-and-mobile-calls/",
+			deals_unlimitedukandmobilecalls: "http://www.plus.net/deals/unlimited/unlimited-UK-and-mobile-calls/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited/anytime-international/"
 		},
 	    	fibre:  {
 			deals_lineonly: "http://www.plus.net/deals/unlimited-fibre/line-only/",
-			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre/evenings-and-weekends/",
-			deals_anytime: "http://www.plus.net/deals/unlimited-fibre/anytime/",
+			deals_eveningsandweekendsandmobilecalls: "http://www.plus.net/deals/unlimited-fibre/evening-and-weekend-UK-and-mobile-calls/",
+			deals_unlimitedukandmobilecalls: "http://www.plus.net/deals/unlimited-fibre/unlimited-UK-and-mobile-calls/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre/anytime-international/"
 		},
 	    	fibreExtra:  {
 			deals_lineonly: "http://www.plus.net/deals/unlimited-fibre-extra/line-only/",
-			deals_eveningsandweekends: "http://www.plus.net/deals/unlimited-fibre-extra/evenings-and-weekends/",
-			deals_anytime: "http://www.plus.net/deals/unlimited-fibre-extra/anytime/",
+			deals_eveningsandweekendsandmobilecalls: "http://www.plus.net/deals/unlimited-fibre-extra/evening-and-weekend-UK-and-mobile-calls/",
+			deals_unlimitedukandmobilecalls: "http://www.plus.net/deals/unlimited-fibre-extra/unlimited-UK-and-mobile-calls/",
 			deals_anytimeinternational: "http://www.plus.net/deals/unlimited-fibre-extra/anytime-international/"
 		}
 	}

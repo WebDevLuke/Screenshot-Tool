@@ -34,7 +34,7 @@ require_relative 'customData.rb'
 #############################################################
 
 if ARGV[0] == "help"
-	abort("#{div}Arguments Breakdown:#{div}ruby customScreenshots.rb [Proxy] [URLS]\n\n[Proxy] = Enter your proxy IP address here\n\n[URLS] Enter your array key from customData.rb\n\n[Responsive] Take mobile and tablet screens. Enter 'true' or 'false' \n\n")
+	abort("#{div}Arguments Breakdown:#{div}ruby customScreenshots.rb [Proxy] [URLS] [Responsive]\n\n[Proxy] = Enter your proxy IP address here\n\n[URLS] Enter your array key from customData.rb\n\n[Responsive] Take mobile and tablet screens. Enter 'true' or 'false' \n\n")
 end	
 
 #############################################################
@@ -50,6 +50,7 @@ puts "#{div}Data Entered#{div}"
 puts "Proxy = #{proxy}"
 puts "Custom URLs = #{data}"
 puts "Take Responsive Screens = #{responsive}"
+puts "#{div}"
 
 #############################################################
 # CREATE DIRECTORIES
@@ -137,14 +138,22 @@ goto.each do |page, url|
 	$browser.goto "#{url}"
 	puts "Opened #{url}"
 
+	puts "This is #{page}"
+
 	# Open legals
 	legals()
 
 	# Wait til everything is loaded
 	wait.call
 
+	slide = $browser.element(id: "tk_carousel_tab-3")
+	if slide.exists?
+		$browser.element(id: "tk_carousel_tab-3").hover
+		puts "Slide 3 is selected"
+	end
+
 	#Open each resolution and take a screenshot
-	if responsive == true
+	if responsive == "true"
 		$sizes.each do |resolution, pixel_value|		
 			$browser.window.resize_to(pixel_value[:width], pixel_value[:height])
 			$browser.screenshot.save "#{data}_#{page}_#{resolution}.png"

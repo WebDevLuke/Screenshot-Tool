@@ -215,7 +215,7 @@ goto.each do |page, url|
 	# get current page and convert to string
 	current = page.to_s
 		
-	if type == "existing-customer" || type == "affiliate" || current == "deals_lineonly" || current == "deals_eveningsandweekends" || current == "deals_anytime" || current == "deals_anytimeinternational"
+	if type == "existing-customer" || type == "affiliate" || current == "deals_lineonly" || current == "deals_eveningsandweekendsandmobilecalls" || current == "deals_unlimitedukandmobilecalls" || current == "deals_anytimeinternational "
 		$browser.goto "#{url}#{promo}"
 		puts "Opened #{url}#{promo}"
 	elsif current == "homepage_slide2"
@@ -284,8 +284,8 @@ end
 
 if area == "res" && type == "standard" || area == "res" && type == "affiliate"
 	puts "| Deals page (#{product}) - Line Only | [View Preview | ^#{promo}_deals_lineonly_#{product}_desktop.png] |"
-	puts "| Deals page (#{product}) - Evenings & Weekends | [View Preview | ^#{promo}_deals_eveningsandweekends_#{product}_desktop.png] |"
-	puts "| Deals page (#{product}) - Anytime | [View Preview | ^#{promo}_deals_anytime_#{product}_desktop.png] |"
+	puts "| Deals page (#{product}) - Evenings & Weekends UK & Mobile Calls | [View Preview | ^#{promo}_deals_eveningsandweekendsandmobilecalls_#{product}_desktop.png] |"
+	puts "| Deals page (#{product}) - Unlimited UK & Mobile Calls | [View Preview | ^#{promo}_deals_unlimitedukandmobilecalls_#{product}_desktop.png] |"
 	puts "| Deals page (#{product}) - Anytime International 300 | [View Preview | ^#{promo}_deals_anytimeinternational_#{product}_desktop.png] |"
 elsif area == "biz" && type == "standard" || area == "biz" && type == "affiliate"
 	puts "| Deals page (#{product}) - PayG | [View Preview | ^#{promo}_deals_payg_#{product}_desktop.png] |"
