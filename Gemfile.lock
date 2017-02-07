@@ -4,6 +4,11 @@ GEM
     childprocess (0.6.1)
       ffi (~> 1.0, >= 1.0.11)
     ffi (1.9.17)
+    gastly (1.0.1)
+      mini_magick (~> 4.2)
+      phantomjs (~> 2.1.1)
+    mini_magick (4.6.0)
+    phantomjs (2.1.1.0)
     rubyzip (1.2.0)
     selenium-webdriver (3.0.7)
       childprocess (~> 0.5)
@@ -17,6 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  gastly
   watir
 
 BUNDLED WITH
