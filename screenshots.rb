@@ -10,7 +10,7 @@
 #############################################################
 
 # Load the webdriver
-require 'watir-webdriver'
+require 'watir'
 
 # Define the divider
 div = "\n----------------------------------------\n"
@@ -25,9 +25,6 @@ wait = ->{
 
 # Grab data
 require_relative 'data.rb'
-
-# Grab custom data
-require_relative 'customData.rb'
 
 #############################################################
 # SET UP HELP
@@ -89,41 +86,13 @@ end
 # Open Browser with a Proxy #
 $browser = Watir::Browser.new :firefox, :profile => profile
 
-#############################################################
-# CLICK LEGALS FUNCTION
-#############################################################
-
-def legals()
-	legals = $browser.h2 :text => "Here's the legal bit"
-	jlplegals = $browser.span :class => 'expander-control'
-	if legals.exists?
-		puts "Clicked Legals"
-		legals.click
-	elsif jlplegals.exists?
-		puts "Clicked JLP Legals"
-		jlplegals.click
-	else
-		puts "No legals found to click"
-	end
-end
-
-#############################################################
-# GET RID OF COOKIE BANNER
-#############################################################
-
-$browser.goto "https://www.plus.net"
-wait.call
-cookie = $browser.div(:id => 'cookieBanner').link :text => '×'
-if cookie.exists?
-	cookie.click
-	puts "Disabled Cookie Banner"
-end
 
 #############################################################
 # DEFINE DATA PATHS
 #############################################################
 
 goto = $customUrls[:"#{data}"]
+
 
 #############################################################
 # TAKE SCREENSHOTS
@@ -134,23 +103,14 @@ goto.each do |page, url|
 
 	# get current page and convert to string
 	current = page.to_s
-		
+
 	$browser.goto "#{url}"
 	puts "Opened #{url}"
 
 	puts "This is #{page}"
 
-	# Open legals
-	legals()
-
 	# Wait til everything is loaded
 	wait.call
-
-	slide = $browser.element(id: "tk_carousel_tab-3")
-	if slide.exists?
-		$browser.element(id: "tk_carousel_tab-3").hover
-		puts "Slide 3 is selected"
-	end
 
 	#Open each resolution and take a screenshot
 	if responsive == "true"
@@ -171,21 +131,21 @@ end
 # SPIT OUT JIRA TEMPLATE
 #############################################################
 
-puts "#{div}Jira Ticket Signoff Template#{div}"
+# puts "#{div}Jira Ticket Signoff Template#{div}"
 	
-puts "{panel:title=(!) Signoff Screenshots | borderColor=#f26d00| titleBGColor=#ffd7b7| borderWidth=3px| bgColor=#FFF| borderStyle=solid}"
-puts "h3.Signoff Screenshots"
-puts "|| Page || Screenshot ||"
+# puts "{panel:title=(!) Signoff Screenshots | borderColor=#f26d00| titleBGColor=#ffd7b7| borderWidth=3px| bgColor=#FFF| borderStyle=solid}"
+# puts "h3.Signoff Screenshots"
+# puts "|| Page || Screenshot ||"
 
-goto.each do |page, url|
-	if responsive == true
-		puts "| #{page} | [View Preview | ^#{data}_#{page}_#{resolution}.png] |"
-	else
-		puts "| #{page} | [View Preview | ^#{data}_#{page}.png] |"
-	end
-end
+# goto.each do |page, url|
+# 	if responsive == true
+# 		puts "| #{page} | [View Preview | ^#{data}_#{page}_#{resolution}.png] |"
+# 	else
+# 		puts "| #{page} | [View Preview | ^#{data}_#{page}.png] |"
+# 	end
+# end
 
-puts "{panel}"
+# puts "{panel}"
 
 
 #############################################################
