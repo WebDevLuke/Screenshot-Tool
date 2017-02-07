@@ -1,5 +1,4 @@
-# Full List of URL's
-
+# Full List of URLs
 $customUrls = {
 
 	MBM: {
@@ -16,13 +15,28 @@ $customUrls = {
 
 # Resolutions
 $sizes = {
+	desktopLarge: {
+		width: 1920
+	},
 	desktop: {
-		width: 1200
+		width: 1600
+	},
+	laptopLarge: {
+		width: 1440
+	},
+	laptop: {
+		width: 1024
 	},
 	tablet: {
-		width: 800
+		width: 768
 	},
-	mobile: {
-		width: 390
+	mobileMedium: {
+		width: 425
+	},
+	mobileMedium: {
+		width: 375
+	},
+	mobileSmall: {
+		width: 320
 	}
 }
